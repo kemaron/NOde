@@ -9,10 +9,10 @@ process.stdin.on('readable', function() {
                 process.exit();
                 break;
             case '/ver':
-                console.log(process.versions);
+                process.stdout.write(process.versions.node);
                 break;
             case '/env':
-                console.log(process.env);
+                process.stdout.write(process.env.computername);
                 break;
 
             default:
